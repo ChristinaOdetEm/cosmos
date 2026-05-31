@@ -20,6 +20,7 @@ outputs/*
 !data/processed/astrodeep_jwst.parquet
 !data/processed/astrodeep_jwst_sample_250.parquet
 !data/processed/ceers_jwst.parquet
+!data/processed/jades_dr5.parquet
 !outputs/figures/
 !outputs/manifests/
 !outputs/reports/
@@ -32,6 +33,10 @@ outputs/*
 !outputs/figures/ceers_jwst_zphot_distribution_normalized.png
 !outputs/figures/ceers_jwst_zphot_fit.png
 !outputs/figures/ceers_jwst_zphot_residuals.png
+!outputs/figures/jades_dr5_z_a_distribution.png
+!outputs/figures/jades_dr5_z_a_distribution_normalized.png
+!outputs/figures/jades_dr5_z_a_fit.png
+!outputs/figures/jades_dr5_z_a_residuals.png
 !outputs/manifests/astrodeep_jwst.manifest.json
 !outputs/manifests/astrodeep_jwst_01.manifest.json
 !outputs/manifests/astrodeep_jwst_02.manifest.json
@@ -41,5 +46,9 @@ outputs/*
 !outputs/manifests/ceers_jwst.manifest.json
 !outputs/manifests/ceers_jwst_01.manifest.json
 !outputs/manifests/ceers_jwst_02.manifest.json
+!outputs/manifests/jades_dr5.manifest.json
+!outputs/manifests/jades_dr5_01.manifest.json
+!outputs/manifests/jades_dr5_02.manifest.json
 !outputs/reports/astrodeep_jwst_sample_vs_full_report.md
 !outputs/reports/ceers_vs_astrodeep_redshift_comparison.md
+!outputs/reports/jades_vs_ceers_vs_astrodeep.md

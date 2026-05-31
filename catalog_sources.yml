@@ -14,3 +14,14 @@ catalogs:
     table_name: J/A+A/691/A240/ceersp
     format: fits
     filename: ceers_jwst.fits
+  jades_dr5:
+    kind: jades_dr5
+    description: JADES DR5 public photometric catalog combined from the GOODS-S and GOODS-N release files, with DR4 spectroscopic matches by NIRCam DR5 ID where available.
+    url: https://jades.herts.ac.uk/DR4/Combined_DR4_external_v1.2.1.fits
+    urls:
+      - https://slate.ucsc.edu/~brant/jades-dr5/GOODS-S/hlsp/catalogs/hlsp_jades_jwst_nircam_goods-s_photometry_v5.0_catalog.fits
+      - https://slate.ucsc.edu/~brant/jades-dr5/GOODS-N/hlsp/catalogs/hlsp_jades_jwst_nircam_goods-n_photometry_v5.0_catalog.fits
+    filename: jades_dr4_combined_external_v1.2.1.fits
+    filenames:
+      - jades_dr5_goods_s_photometry_v5.0_catalog.fits
+      - jades_dr5_goods_n_photometry_v5.0_catalog.fits

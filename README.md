@@ -1,6 +1,6 @@
 # JWST Galaxy Analysis Foundation
 
-This repository is a reproducible starting point for working with public galaxy catalogs in a JWST-focused workflow. It is intentionally scoped to project setup, ingestion, provenance, and exploratory analysis. It does **not** search for anomalies yet.
+This repository is a reproducible starting point for working with public galaxy catalogs in a JWST-focused workflow. It is intentionally scoped to catalog acquisition, provenance, exploratory redshift analysis, and replication-oriented reporting. It does **not** search for anomalies yet.
 
 ## Goals
 
@@ -24,13 +24,20 @@ This repository is a reproducible starting point for working with public galaxy 
 |   `-- 01_catalog_eda_template.ipynb
 |-- outputs/
 |   |-- figures/
-|   `-- manifests/
+|   |-- manifests/
+|   `-- reports/
+|-- research/
+|   |-- observations/
+|   |-- notes/
+|   |-- questions/
+|   `-- validations/
 |-- src/jwst_galaxy_analysis/
 |   |-- cli.py
 |   |-- config.py
 |   |-- datasets.py
 |   |-- io.py
 |   |-- provenance.py
+|   |-- redshift.py
 |   `-- transforms.py
 |-- catalog_sources.yml
 `-- pyproject.toml
@@ -71,6 +78,8 @@ This repository is a reproducible starting point for working with public galaxy 
 - Each transformation writes a JSON manifest under `outputs/manifests/`.
 - Each dataset write includes row counts, column names, hashes, timestamps, and transformation metadata.
 - Notebook work should save durable outputs to `outputs/figures/` or `data/processed/`, not only to notebook state.
+- Cross-catalog summaries and replication writeups should be saved under `outputs/reports/`.
+- Observation and methodology records should be written under `research/`.
 
 ## Catalog ingestion
 
@@ -79,23 +88,42 @@ The foundation supports public catalog loading from:
 - direct file URLs (`csv`, `tsv`, `parquet`, `fits`)
 - VizieR catalog identifiers through `astroquery`
 - a local YAML registry in `catalog_sources.yml`
+- custom multi-file adapters for public releases that need region combination or cross-release joins
 
 Example commands:
 
 ```powershell
 jwst-galaxy catalogs list
-jwst-galaxy catalogs fetch demo_local --registry catalog_sources.yml
-jwst-galaxy fetch-url "https://example.org/catalog.csv" --name example_catalog
-jwst-galaxy vizier-fetch "J/ApJS/264/35/catalog" --name example_vizier
+jwst-galaxy catalogs fetch astrodeep_jwst --registry catalog_sources.yml
+jwst-galaxy catalogs fetch ceers_jwst --registry catalog_sources.yml
+jwst-galaxy catalogs fetch jades_dr5 --registry catalog_sources.yml
 ```
 
-Replace the example identifiers with the public galaxy catalogs we decide to prioritize next.
+The current registry includes:
 
-The first registered real catalog is `astrodeep_jwst`, sourced from VizieR catalog `J/A+A/691/A240` with a small sample row limit for initial validation.
+- `astrodeep_jwst`: ASTRODEEP-JWST Abell 2744 catalog from VizieR `J/A+A/691/A240/a2744p`
+- `ceers_jwst`: CEERS catalog from VizieR `J/A+A/691/A240/ceersp`
+- `jades_dr5`: combined JADES DR5 GOODS-S and GOODS-N photometric catalogs with public DR4 spectroscopic matches by `NIRCam_DR5_ID`
+
+The JADES adapter preserves the raw DR5 region files and the raw DR4 spectroscopic catalog, then materializes a combined processed parquet for downstream analysis.
+
+## Current outputs
+
+The repository currently contains three JWST redshift baselines:
+
+- ASTRODEEP
+- CEERS
+- JADES
+
+Key replication artifacts include:
+
+- `research/observations/OBS-005.md` and `OBS-006.md` for CEERS
+- `research/observations/OBS-007.md` and `OBS-008.md` for JADES
+- `outputs/reports/ceers_vs_astrodeep_redshift_comparison.md`
+- `outputs/reports/jades_vs_ceers_vs_astrodeep.md`
 
 ## Next foundation steps
 
-- choose the first real public JWST-related catalogs to register
 - add tests around catalog adapters and transformation manifests
 - standardize a schema for photometry, redshift, and morphology columns
 

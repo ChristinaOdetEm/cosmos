@@ -53,7 +53,15 @@ def command_catalogs_fetch(name: str, registry_path: Path) -> int:
     registry = load_registry(registry_path)
     result = fetch_from_spec(registry[name])
     print(f"Fetched {name}")
-    print(f"Raw: {result['raw_path']}")
+    raw_paths = result.get("raw_paths")
+    if raw_paths is not None:
+        for raw_path in raw_paths:
+            print(f"Raw: {raw_path}")
+        spectroscopy_raw_path = result.get("spectroscopy_raw_path")
+        if spectroscopy_raw_path is not None:
+            print(f"Raw: {spectroscopy_raw_path}")
+    else:
+        print(f"Raw: {result['raw_path']}")
     print(f"Processed: {result['processed_path']}")
     print(f"Manifest: {result['manifest_path']}")
     return 0
@@ -102,4 +110,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-
