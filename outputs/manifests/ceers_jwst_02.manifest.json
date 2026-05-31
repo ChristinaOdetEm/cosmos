@@ -1,0 +1,34 @@
+{
+  "name": "standardize_columns",
+  "description": "Normalize column names to lowercase snake_case for consistent downstream analysis.",
+  "input_name": "ceers_jwst_01",
+  "output_name": "ceers_jwst_02",
+  "parameters": {},
+  "row_count_before": 82547,
+  "row_count_after": 82547,
+  "columns_before": [
+    "ID",
+    "RAJ2000",
+    "DEJ2000",
+    "zspec",
+    "zphot",
+    "EAzYeazyv13",
+    "EAzYLarson",
+    "EAzYLarsonLyaRed",
+    "Flag"
+  ],
+  "columns_after": [
+    "id",
+    "raj2000",
+    "dej2000",
+    "zspec",
+    "zphot",
+    "eazyeazyv13",
+    "eazylarson",
+    "eazylarsonlyared",
+    "flag"
+  ],
+  "created_at_utc": "2026-05-31T19:15:44+00:00",
+  "output_path": null,
+  "output_sha256": null
+}

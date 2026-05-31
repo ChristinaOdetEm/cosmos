@@ -35,6 +35,33 @@ Future agents should review assumptions before proposing analyses or interpretat
 
 ## Entries
 
+### 2026-05-31 21:07 Europe/Warsaw
+
+- Agent: `Codex`
+- Commit: `<pending>`
+- Summary: Added the CEERS replication baseline by selecting a public CEERS photo-z catalog with documented provenance, ingesting the full dataset, creating acquisition and distribution observations, fitting the same exponential baseline model, and writing the first CEERS-vs-ASTRODEEP comparison report.
+- Reason: Establish an independent JWST-field replication baseline before expanding beyond the ASTRODEEP Abell 2744 characterization.
+
+- Files:
+  - `.gitignore`
+  - `catalog_sources.yml`
+  - `data/raw/ceers_jwst.fits`
+  - `data/processed/ceers_jwst.parquet`
+  - `outputs/manifests/ceers_jwst.manifest.json`
+  - `outputs/manifests/ceers_jwst_01.manifest.json`
+  - `outputs/manifests/ceers_jwst_02.manifest.json`
+  - `outputs/figures/ceers_jwst_zphot_distribution.png`
+  - `outputs/figures/ceers_jwst_zphot_distribution_normalized.png`
+  - `outputs/figures/ceers_jwst_zphot_fit.png`
+  - `outputs/figures/ceers_jwst_zphot_residuals.png`
+  - `outputs/reports/ceers_vs_astrodeep_redshift_comparison.md`
+  - `research/observations/OBS-005.md`
+  - `research/observations/OBS-006.md`
+  - `agent_handoff.md`
+
+- Next:
+  - Use the CEERS and ASTRODEEP baselines for replication-only follow-up without promoting descriptive differences into hypotheses.
+
 ### 2026-05-31 20:48 Europe/Warsaw
 
 - Agent: `Codex`

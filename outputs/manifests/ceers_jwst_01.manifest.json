@@ -1,0 +1,34 @@
+{
+  "name": "drop_empty_rows",
+  "description": "Remove fully empty rows created by export or parsing artifacts.",
+  "input_name": "ceers_jwst.fits",
+  "output_name": "ceers_jwst_01",
+  "parameters": {},
+  "row_count_before": 82547,
+  "row_count_after": 82547,
+  "columns_before": [
+    "ID",
+    "RAJ2000",
+    "DEJ2000",
+    "zspec",
+    "zphot",
+    "EAzYeazyv13",
+    "EAzYLarson",
+    "EAzYLarsonLyaRed",
+    "Flag"
+  ],
+  "columns_after": [
+    "ID",
+    "RAJ2000",
+    "DEJ2000",
+    "zspec",
+    "zphot",
+    "EAzYeazyv13",
+    "EAzYLarson",
+    "EAzYLarsonLyaRed",
+    "Flag"
+  ],
+  "created_at_utc": "2026-05-31T19:15:44+00:00",
+  "output_path": null,
+  "output_sha256": null
+}

@@ -7,3 +7,10 @@ catalogs:
     table_name: J/A+A/691/A240/a2744p
     format: fits
     filename: astrodeep_jwst.fits
+  ceers_jwst:
+    kind: vizier
+    description: ASTRODEEP-JWST CEERS redshift catalog from VizieR.
+    catalog: J/A+A/691/A240
+    table_name: J/A+A/691/A240/ceersp
+    format: fits
+    filename: ceers_jwst.fits
