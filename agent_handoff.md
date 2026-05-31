@@ -35,6 +35,42 @@ Future agents should review assumptions before proposing analyses or interpretat
 
 ## Entries
 
+### 2026-05-31 23:07 Europe/Warsaw
+
+- Agent: `Codex`
+- Commit: `8df8d9e`
+- Summary: Added the JADES replication baseline by selecting the latest public JADES DR5 photometric release, preserving the raw download locations in the registry, joining public DR4 spectroscopic matches by `NIRCam_DR5_ID`, generating the processed parquet and provenance manifests, reproducing the shared exponential-fit diagnostics, and updating the README to reflect the current catalog baselines.
+- Reason: Extend the replication exercise to a third independent JWST catalog while keeping the branch pushable by leaving the very large raw FITS downloads untracked.
+
+- Files:
+  - `.gitignore`
+  - `README.md`
+  - `catalog_sources.yml`
+  - `data/processed/jades_dr5.parquet`
+  - `outputs/manifests/jades_dr5.manifest.json`
+  - `outputs/manifests/jades_dr5_01.manifest.json`
+  - `outputs/manifests/jades_dr5_02.manifest.json`
+  - `outputs/figures/jades_dr5_z_a_distribution.png`
+  - `outputs/figures/jades_dr5_z_a_distribution_normalized.png`
+  - `outputs/figures/jades_dr5_z_a_fit.png`
+  - `outputs/figures/jades_dr5_z_a_residuals.png`
+  - `outputs/reports/jades_vs_ceers_vs_astrodeep.md`
+  - `research/observations/OBS-007.md`
+  - `research/observations/OBS-008.md`
+  - `src/jwst_galaxy_analysis/cli.py`
+  - `src/jwst_galaxy_analysis/datasets.py`
+  - `src/jwst_galaxy_analysis/redshift.py`
+
+- Artifact locations:
+  - Local raw JADES DR5 GOODS-S: `data/raw/jades_dr5_goods_s_photometry_v5.0_catalog.fits`
+  - Local raw JADES DR5 GOODS-N: `data/raw/jades_dr5_goods_n_photometry_v5.0_catalog.fits`
+  - Local raw JADES DR4 spectroscopy: `data/raw/jades_dr4_combined_external_v1.2.1.fits`
+  - Processed JADES dataset: `data/processed/jades_dr5.parquet`
+
+- Next:
+  - Reuse `jades_dr5.parquet` and `outputs/reports/jades_vs_ceers_vs_astrodeep.md` as the three-catalog replication baseline for follow-up descriptive checks.
+  - Keep the raw JADES FITS files local or move them to an external artifact store rather than recommitting them to git.
+
 ### 2026-05-31 22:06 Europe/Warsaw
 
 - Agent: `Codex`
