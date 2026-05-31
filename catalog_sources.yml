@@ -2,6 +2,9 @@ version: 1
 catalogs:
   astrodeep_jwst:
     kind: vizier
-    description: ASTRODEEP-JWST public catalog sample from VizieR.
+    description: ASTRODEEP-JWST Abell 2744 redshift sample from VizieR.
     catalog: J/A+A/691/A240
+    table_name: J/A+A/691/A240/a2744p
+    format: fits
+    filename: astrodeep_jwst.fits
     row_limit: 250

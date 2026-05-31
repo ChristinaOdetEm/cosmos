@@ -14,7 +14,13 @@ outputs/*
 !data/raw/.gitkeep
 !data/interim/.gitkeep
 !data/processed/.gitkeep
+!data/raw/astrodeep_jwst.fits
+!data/processed/astrodeep_jwst.parquet
 !outputs/figures/
 !outputs/manifests/
 !outputs/figures/.gitkeep
 !outputs/manifests/.gitkeep
+!outputs/figures/astrodeep_jwst_zphot_distribution.png
+!outputs/manifests/astrodeep_jwst.manifest.json
+!outputs/manifests/astrodeep_jwst_01.manifest.json
+!outputs/manifests/astrodeep_jwst_02.manifest.json

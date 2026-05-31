@@ -7,6 +7,7 @@ from typing import Any
 import pandas as pd
 import requests
 import yaml
+from astropy.config.paths import set_temp_cache
 from astroquery.vizier import Vizier
 
 from .config import ensure_directories
@@ -24,6 +25,7 @@ class CatalogSpec:
     format: str | None = None
     filename: str | None = None
     catalog: str | None = None
+    table_name: str | None = None
     row_limit: int | None = None
 
 
@@ -48,10 +50,18 @@ def fetch_catalog_from_url(url: str, target_path: Path) -> Path:
     return target_path
 
 
-def fetch_catalog_from_vizier(catalog_id: str, target_path: Path, row_limit: int | None = None) -> Path:
+def fetch_catalog_from_vizier(
+    catalog_id: str,
+    target_path: Path,
+    row_limit: int | None = None,
+    table_name: str | None = None,
+) -> Path:
     target_path.parent.mkdir(parents=True, exist_ok=True)
-    vizier = Vizier(row_limit=row_limit if row_limit is not None else -1)
-    tables = vizier.get_catalogs(catalog_id)
+    cache_dir = target_path.parent.parent / "interim" / "astropy-cache"
+    cache_dir.mkdir(parents=True, exist_ok=True)
+    with set_temp_cache(cache_dir, delete=False):
+        vizier = Vizier(row_limit=row_limit if row_limit is not None else -1)
+        tables = vizier.get_catalogs(table_name or catalog_id)
     if len(tables) == 0:
         raise ValueError(f"No tables returned for VizieR catalog {catalog_id}")
     tables[0].write(target_path, overwrite=True)
@@ -99,7 +109,12 @@ def fetch_from_spec(spec: CatalogSpec, *, project_root: Path | None = None) -> d
     elif spec.kind == "vizier":
         if not spec.catalog:
             raise ValueError(f"Catalog {spec.name} is missing a VizieR identifier")
-        fetch_catalog_from_vizier(spec.catalog, raw_path.with_suffix(".fits"), row_limit=spec.row_limit)
+        fetch_catalog_from_vizier(
+            spec.catalog,
+            raw_path.with_suffix(".fits"),
+            row_limit=spec.row_limit,
+            table_name=spec.table_name,
+        )
         raw_path = raw_path.with_suffix(".fits")
     else:
         raise ValueError(f"Unsupported catalog kind: {spec.kind}")
@@ -116,4 +131,3 @@ def fetch_from_spec(spec: CatalogSpec, *, project_root: Path | None = None) -> d
         "processed_path": processed_path,
         "manifest_path": manifest_path,
     }
-
