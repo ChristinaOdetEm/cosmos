@@ -35,6 +35,23 @@ Future agents should review assumptions before proposing analyses or interpretat
 
 ## Entries
 
+### 2026-05-31 20:17 Europe/Warsaw
+
+- Agent: `Codex`
+- Commit: `<pending>`
+- Summary: Added `OBS-003` for the `zphot > 10` subset, including a sorted object table plus scatter and multi-bin histogram outputs generated from the processed ASTRODEEP-JWST catalog.
+- Reason: Record the high-`zphot` subset descriptively and preserve the exact visualization outputs used to inspect the apparent gap without adding interpretation.
+
+- Files:
+  - `outputs/figures/astrodeep_jwst_zphot_gt10_scatter.png`
+  - `outputs/figures/astrodeep_jwst_zphot_gt10_histograms.png`
+  - `research/observations/OBS-003.md`
+  - `research/validations/VAL-100.md`
+  - `agent_handoff.md`
+
+- Next:
+  - Keep future follow-up on this subset descriptive unless a new question or validation explicitly changes scope.
+
 ### 2026-05-31 20:02 Europe/Warsaw
 
 - Agent: `Codex`
