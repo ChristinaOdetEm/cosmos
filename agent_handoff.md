@@ -21,22 +21,27 @@ Future agents should review assumptions before proposing analyses or interpretat
 ## Entry Template
 
 ### YYYY-MM-DD HH:MM TZ
+
 - Agent: `Codex`
 - Commit: `<hash>`
 - Summary: `<what changed>`
 - Reason: `<why it changed>`
+
 - Files:
   - `path/to/file`
+
 - Next:
   - `<recommended follow-up>`
 
 ## Entries
 
 ### 2026-05-31 19:10 Europe/Warsaw
+
 - Agent: `Codex`
 - Commit: `2544bdc`
 - Summary: Added a lightweight research provenance framework under `research/` with staged record types for questions, observations, patterns, hypotheses, and validations.
 - Reason: Create a reproducible reasoning layer without changing the existing data pipeline.
+
 - Files:
   - `research/README.md`
   - `research/questions/TEMPLATE.md`
@@ -52,6 +57,7 @@ Future agents should review assumptions before proposing analyses or interpretat
   - `research/validations/TEMPLATE.md`
   - `research/validations/VAL-001.md`
   - Removed `research/questions.md`
+
 - Next:
   - Add new provenance records by extending the numbered files in each folder.
   - Update this handoff log after each meaningful repo change.

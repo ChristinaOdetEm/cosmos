@@ -9,15 +9,20 @@ External agents tracking repository changes should also read [../agent_handoff.m
 ## Workflow
 
 Assumption
-↓
+|
+v
 Question
-↓
+|
+v
 Observation
-↓
+|
+v
 Pattern
-↓
+|
+v
 Hypothesis
-↓
+|
+v
 Validation
 
 1. Start with an assumption record in `assumptions/` when a working foundation needs to be made explicit.
