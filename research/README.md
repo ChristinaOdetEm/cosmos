@@ -4,6 +4,8 @@ This layer tracks research reasoning from question -> observation -> pattern -> 
 
 It is intentionally lightweight. The purpose is reproducibility of reasoning, not process overhead.
 
+External agents tracking repository changes should also read [../agent_handoff.md](../agent_handoff.md).
+
 ## Workflow
 
 1. Start with a question record in `questions/`.
