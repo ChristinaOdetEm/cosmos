@@ -35,6 +35,28 @@ Future agents should review assumptions before proposing analyses or interpretat
 
 ## Entries
 
+### 2026-05-31 19:43 Europe/Warsaw
+
+- Agent: `Codex`
+- Commit: `<pending>`
+- Summary: Shifted the research records from framework-building to evidence-building by defining the first active question, first candidate data-quality pattern, and first planned validation around the ASTRODEEP-JWST Abell 2744 redshift sample.
+- Reason: The initial dataset contains redshift fields but not galaxy mass fields, so the active research set needed to align with the available evidence before further analysis.
+
+- Files:
+  - `research/observations/OBS-001.md`
+  - `research/questions/Q-001.md`
+  - `research/questions/Q-002.md`
+  - `research/questions/Q-003.md`
+  - `research/questions/Q-100.md`
+  - `research/patterns/PAT-001.md`
+  - `research/patterns/PAT-100.md`
+  - `research/validations/VAL-100.md`
+  - `agent_handoff.md`
+
+- Next:
+  - Validate whether `zphot` coverage and distribution support exploratory analysis.
+  - Document the limitations introduced by the near-absence of `zspec`.
+
 ### 2026-05-31 19:10 Europe/Warsaw
 
 - Agent: `Codex`
