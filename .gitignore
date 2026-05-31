@@ -25,6 +25,7 @@ outputs/*
 !outputs/manifests/.gitkeep
 !outputs/reports/.gitkeep
 !outputs/figures/astrodeep_jwst_zphot_distribution.png
+!outputs/figures/astrodeep_jwst_zphot_sample_vs_full.png
 !outputs/manifests/astrodeep_jwst.manifest.json
 !outputs/manifests/astrodeep_jwst_01.manifest.json
 !outputs/manifests/astrodeep_jwst_02.manifest.json

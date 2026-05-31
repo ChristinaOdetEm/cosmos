@@ -35,6 +35,23 @@ Future agents should review assumptions before proposing analyses or interpretat
 
 ## Entries
 
+### 2026-05-31 20:38 Europe/Warsaw
+
+- Agent: `Codex`
+- Commit: `<pending>`
+- Summary: Generated a shared-bin `zphot` histogram comparison figure for the preserved 250-row sample and the full ASTRODEEP catalog, and linked the artifact into the full-ingest observation and report.
+- Reason: Add a direct visual comparison between the sample and full `zphot` distributions without changing the underlying datasets.
+
+- Files:
+  - `.gitignore`
+  - `outputs/figures/astrodeep_jwst_zphot_sample_vs_full.png`
+  - `outputs/reports/astrodeep_jwst_sample_vs_full_report.md`
+  - `research/observations/OBS-004.md`
+  - `agent_handoff.md`
+
+- Next:
+  - Reuse the shared-bin comparison artifact when discussing sample-versus-full distribution differences.
+
 ### 2026-05-31 20:31 Europe/Warsaw
 
 - Agent: `Codex`

@@ -10,6 +10,7 @@ This report compares the preserved 250-row ASTRODEEP-JWST Abell 2744 sample snap
 - Preserved sample processed artifact: `data/processed/astrodeep_jwst_sample_250.parquet`
 - Full raw artifact: `data/raw/astrodeep_jwst.fits`
 - Full processed artifact: `data/processed/astrodeep_jwst.parquet`
+- Visual comparison artifact: `outputs/figures/astrodeep_jwst_zphot_sample_vs_full.png`
 
 ## Size Comparison
 
