@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jwst-galaxy-analysis"
+version = "0.1.0"
+description = "Reproducible foundation for JWST galaxy catalog analysis."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+  "astropy>=6.1",
+  "astroquery>=0.4.10",
+  "jupyterlab>=4.2",
+  "matplotlib>=3.9",
+  "pandas>=2.2",
+  "pyarrow>=16.1",
+  "pyyaml>=6.0.2",
+  "requests>=2.32",
+  "seaborn>=0.13",
+]
+
+[project.optional-dependencies]
+dev = [
+  "ipykernel>=6.29",
+  "pytest>=8.2",
+  "ruff>=0.5",
+]
+
+[project.scripts]
+jwst-galaxy = "jwst_galaxy_analysis.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+

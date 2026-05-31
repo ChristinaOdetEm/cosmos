@@ -1,0 +1,7 @@
+version: 1
+catalogs:
+  astrodeep_jwst:
+    kind: vizier
+    description: ASTRODEEP-JWST public catalog sample from VizieR.
+    catalog: J/A+A/691/A240
+    row_limit: 250
