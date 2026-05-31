@@ -38,7 +38,7 @@ Future agents should review assumptions before proposing analyses or interpretat
 ### 2026-05-31 20:48 Europe/Warsaw
 
 - Agent: `Codex`
-- Commit: `<pending>`
+- Commit: `38bae52`
 - Summary: Added the first methodological note capturing the completed ASTRODEEP sample-to-full replication lesson, including the distribution shift, fitted exponential summary, and replication takeaways.
 - Reason: Preserve the first completed replication exercise as a reusable methodological reference before adding a second catalog.
 
