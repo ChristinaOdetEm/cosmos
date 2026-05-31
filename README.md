@@ -107,6 +107,8 @@ The current registry includes:
 
 The JADES adapter preserves the raw DR5 region files and the raw DR4 spectroscopic catalog, then materializes a combined processed parquet for downstream analysis.
 
+The JADES raw FITS downloads are intentionally kept local under `data/raw/` and are not tracked in git because the public source files are too large for normal repository storage. The registry keeps the exact source URLs needed to recreate them.
+
 ## Current outputs
 
 The repository currently contains three JWST redshift baselines:
