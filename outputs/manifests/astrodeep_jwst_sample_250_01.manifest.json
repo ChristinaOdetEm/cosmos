@@ -4,8 +4,8 @@
   "input_name": "astrodeep_jwst.fits",
   "output_name": "astrodeep_jwst_01",
   "parameters": {},
-  "row_count_before": 42491,
-  "row_count_after": 42491,
+  "row_count_before": 250,
+  "row_count_after": 250,
   "columns_before": [
     "ID",
     "RAJ2000",
@@ -28,7 +28,7 @@
     "EAzYLarsonLyaRed",
     "Flag"
   ],
-  "created_at_utc": "2026-05-31T18:27:15+00:00",
+  "created_at_utc": "2026-05-31T17:30:40+00:00",
   "output_path": null,
   "output_sha256": null
 }

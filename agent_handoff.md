@@ -35,6 +35,37 @@ Future agents should review assumptions before proposing analyses or interpretat
 
 ## Entries
 
+### 2026-05-31 20:31 Europe/Warsaw
+
+- Agent: `Codex`
+- Commit: `<pending>`
+- Summary: Replaced the main ASTRODEEP 250-row sample ingest with the full 42,491-row table, preserved the original sample artifacts under `_sample_250` names, and added a sample-vs-full comparison report plus a new full-ingest observation record.
+- Reason: The repository needed the complete ASTRODEEP catalog as the primary dataset while keeping the earlier sample-based observations reproducible and comparable.
+
+- Files:
+  - `catalog_sources.yml`
+  - `.gitignore`
+  - `data/raw/astrodeep_jwst.fits`
+  - `data/raw/astrodeep_jwst_sample_250.fits`
+  - `data/processed/astrodeep_jwst.parquet`
+  - `data/processed/astrodeep_jwst_sample_250.parquet`
+  - `outputs/manifests/astrodeep_jwst.manifest.json`
+  - `outputs/manifests/astrodeep_jwst_01.manifest.json`
+  - `outputs/manifests/astrodeep_jwst_02.manifest.json`
+  - `outputs/manifests/astrodeep_jwst_sample_250.manifest.json`
+  - `outputs/manifests/astrodeep_jwst_sample_250_01.manifest.json`
+  - `outputs/manifests/astrodeep_jwst_sample_250_02.manifest.json`
+  - `outputs/reports/astrodeep_jwst_sample_vs_full_report.md`
+  - `research/observations/OBS-001.md`
+  - `research/observations/OBS-002.md`
+  - `research/observations/OBS-003.md`
+  - `research/observations/OBS-004.md`
+  - `agent_handoff.md`
+
+- Next:
+  - Use the full `astrodeep_jwst` artifacts for future analysis unless a sample-specific comparison is required.
+  - Keep sample-derived observations tied to the preserved `_sample_250` artifacts.
+
 ### 2026-05-31 20:17 Europe/Warsaw
 
 - Agent: `Codex`

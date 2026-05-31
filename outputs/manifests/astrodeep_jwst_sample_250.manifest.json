@@ -4,8 +4,8 @@
   "input_name": "astrodeep_jwst.fits",
   "output_name": "astrodeep_jwst",
   "parameters": {},
-  "row_count_before": 42491,
-  "row_count_after": 42491,
+  "row_count_before": 250,
+  "row_count_after": 250,
   "columns_before": [
     "ID",
     "RAJ2000",
@@ -28,7 +28,7 @@
     "eazylarsonlyared",
     "flag"
   ],
-  "created_at_utc": "2026-05-31T18:27:15+00:00",
+  "created_at_utc": "2026-05-31T17:30:40+00:00",
   "output_path": "D:\\Cosmos\\data\\processed\\astrodeep_jwst.parquet",
-  "output_sha256": "df997f4cf0d442813d12b68d08fc04d18cd642df50de6a204b253fd8954cbbe9"
+  "output_sha256": "6946140614c4514ed145c23b40b220fbac4a1e2c35aa3b31ec3d923b0afe0629"
 }
