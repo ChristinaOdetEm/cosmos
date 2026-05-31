@@ -2,6 +2,15 @@
 
 This file is the shared handoff surface for external agents tracking repository changes.
 
+## Active Assumptions
+
+- `A-001` Public galaxy catalogs are sufficient for initial exploration
+- `A-002` Questions drive analysis
+- `A-003` No anomaly claims without baseline characterization
+- `A-004` Reproducibility is more important than discovery speed
+
+Future agents should review assumptions before proposing analyses or interpretations.
+
 ## How To Use
 
 - Read the latest entry first.

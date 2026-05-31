@@ -1,6 +1,6 @@
 # Research Provenance Framework
 
-This layer tracks research reasoning from question -> observation -> pattern -> hypothesis -> validation.
+This layer tracks research reasoning from assumption -> question -> observation -> pattern -> hypothesis -> validation.
 
 It is intentionally lightweight. The purpose is reproducibility of reasoning, not process overhead.
 
@@ -8,11 +8,26 @@ External agents tracking repository changes should also read [../agent_handoff.m
 
 ## Workflow
 
-1. Start with a question record in `questions/`.
-2. Add observations in `observations/` for things directly seen in the data.
-3. Promote recurring relationships into patterns in `patterns/`.
-4. Form falsifiable hypotheses in `hypotheses/`.
-5. Record tests and outcomes in `validations/`.
+Assumption
+↓
+Question
+↓
+Observation
+↓
+Pattern
+↓
+Hypothesis
+↓
+Validation
+
+1. Start with an assumption record in `assumptions/` when a working foundation needs to be made explicit.
+2. Define or refine a question record in `questions/`.
+3. Add observations in `observations/` for things directly seen in the data.
+4. Promote recurring relationships into patterns in `patterns/`.
+5. Form falsifiable hypotheses in `hypotheses/`.
+6. Record tests and outcomes in `validations/`.
+
+Assumptions are not facts. They are currently accepted foundations that can later be challenged, replaced, or retired.
 
 ## Linking Rules
 
@@ -26,6 +41,7 @@ External agents tracking repository changes should also read [../agent_handoff.m
 
 - Use one markdown file per record.
 - Keep IDs stable once assigned.
+- Treat assumptions as explicit working foundations, not proven truths.
 - Keep observations descriptive and non-interpretive.
 - Mark illustrative examples clearly so they are not confused with active findings.
 
@@ -33,6 +49,12 @@ External agents tracking repository changes should also read [../agent_handoff.m
 
 ```text
 research/
+|-- assumptions/
+|   |-- TEMPLATE.md
+|   |-- A-001.md
+|   |-- A-002.md
+|   |-- A-003.md
+|   `-- A-004.md
 |-- questions/
 |   |-- TEMPLATE.md
 |   `-- Q-001.md
