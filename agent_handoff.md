@@ -38,7 +38,7 @@ Future agents should review assumptions before proposing analyses or interpretat
 ### 2026-05-31 20:31 Europe/Warsaw
 
 - Agent: `Codex`
-- Commit: `<pending>`
+- Commit: `218852b`
 - Summary: Replaced the main ASTRODEEP 250-row sample ingest with the full 42,491-row table, preserved the original sample artifacts under `_sample_250` names, and added a sample-vs-full comparison report plus a new full-ingest observation record.
 - Reason: The repository needed the complete ASTRODEEP catalog as the primary dataset while keeping the earlier sample-based observations reproducible and comparable.
 
