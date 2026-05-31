@@ -98,3 +98,9 @@ The first registered real catalog is `astrodeep_jwst`, sourced from VizieR catal
 - choose the first real public JWST-related catalogs to register
 - add tests around catalog adapters and transformation manifests
 - standardize a schema for photometry, redshift, and morphology columns
+
+## License
+
+This repository's code is released under the MIT License. See [LICENSE](LICENSE).
+
+External datasets are not automatically covered by the repository license. Each public catalog should be checked and documented according to its own usage terms before redistribution.
