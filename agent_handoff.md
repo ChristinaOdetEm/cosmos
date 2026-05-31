@@ -35,6 +35,21 @@ Future agents should review assumptions before proposing analyses or interpretat
 
 ## Entries
 
+### 2026-05-31 22:06 Europe/Warsaw
+
+- Agent: `Codex`
+- Commit: `<pending>`
+- Summary: Added a cross-catalog diagnostic note comparing selected `zphot` regions in ASTRODEEP-JWST and CEERS-JWST, including counts, flag concentration, spectroscopic coverage, and repeated-value behavior.
+- Reason: Record descriptive catalog and photo-z reliability diagnostics for sparse redshift regions without moving into interpretation.
+
+- Files:
+  - `research/notes/NOTE-002.md`
+  - `agent_handoff.md`
+
+- Next:
+  - Reuse this note as a descriptive baseline before adding any further cross-catalog validation records.
+  - Keep follow-up work framed as catalog diagnostics unless a new question explicitly expands scope.
+
 ### 2026-05-31 21:07 Europe/Warsaw
 
 - Agent: `Codex`
